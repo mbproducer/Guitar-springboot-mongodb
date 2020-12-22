@@ -1,6 +1,5 @@
 package com.supermarket.fruits.model;
 
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,12 +10,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Setter
 @NoArgsConstructor
 @Document
-public class Fruits {
+public class Guitar {
 
     @Id
-    private String idFruits;
+    private String idGuitar;
 
-    private String nameFruits;
+    private String typeGuitar;
 
-    private String colorFruits;
+    private String modelGuitar;
+
+    private int   priceGuitar;
+
 }
+

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FruitsServiceImplementation {
@@ -14,11 +15,18 @@ public class FruitsServiceImplementation {
     FruitsRepository fruitsRepository;
 
     public List<Fruits> getAllFruits(){
-        return fruitsRepository.findAll();
+       return fruitsRepository.findAll();
+    }
+
+    public Optional<Fruits> getfruitid(Fruits fruit){
+        return fruitsRepository.findById(fruit.getIdFruits());
+
     }
 
     public String saveFruit(Fruits fruits){
         fruitsRepository.save(fruits);
         return "fruits is saved";
     }
+
+
 }
