@@ -27,7 +27,7 @@ public class GuitarServiceImplementation {
 
     public String saveGuitar(Guitar guitar){
       guitarRepository.save(guitar);
-      return "Guitar Added";
+      return "Guitar saved";
     }
 }
 
